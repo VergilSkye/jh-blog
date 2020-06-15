@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "dev.vergil.demo.blog",
+      "nativeLanguage": "pt-br"
+    },
+    "jhipsterVersion": "6.9.0",
+    "applicationType": "monolith",
+    "baseName": "blog",
+    "packageName": "dev.vergil.demo.blog",
+    "packageFolder": "dev/vergil/demo/blog",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NDgzYjRmNTk4Mjk2MWMyOGMxZWE1MzE0OTAxYWE1NzRmYTkzYzk2NzE1YWYzNDFkNDI0YjIxNzFmZWI5M2ExYjg0ZjlhNWNhNjcwZDU2MDg0ODc5M2UyYzY2ZWJjMDVkNTRhOTI1YTc5NWQzNjRmNmQwNGM4YzM5MmNlMDgwMzM=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "creationTimestamp": 1592261396084,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "pt-br",
+    "languages": ["pt-br", "en"],
+    "blueprints": []
+  }
+}
