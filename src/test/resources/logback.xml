@@ -8,6 +8,8 @@
 
     <logger name="io.github.jhipster" level="WARN"/>
 
+    <property name="LOG_PATH" value="./logs/"/>
+
     <logger name="javax.activation" level="WARN"/>
     <logger name="javax.mail" level="WARN"/>
     <logger name="javax.xml.bind" level="WARN"/>
