@@ -35,6 +35,7 @@ node {
         }
     }
 
+    
     stage('frontend tests') {
         try {
             sh "./mvnw -ntp com.github.eirslett:frontend-maven-plugin:npm -Dfrontend.npm.arguments='run test'"
@@ -44,13 +45,13 @@ node {
             junit '**/target/test-results/**/TEST-*.xml'
         }
     }
-
+    
     stage('packaging') {
         sh "./mvnw -ntp verify -P-webpack -Pprod -DskipTests"
         archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
     }
     stage('quality analysis') {
-        withSonarQubeEnv('http://144.91.90.109:29000') {
+        withSonarQubeEnv('SONARJ') {
             sh "./mvnw -ntp initialize sonar:sonar"
         }
     }
