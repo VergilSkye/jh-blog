@@ -45,7 +45,7 @@ node {
         }
     }
     stage('deploy') {        
-        sh "**/target/*.jar /opt/jh-blog/app.jar"
+        sh "cp **/target/*.jar /opt/jh-blog/app.jar"
         sh "systemctl restart blog"
     }
 }
