@@ -50,7 +50,7 @@ node {
         archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
     }
     stage('quality analysis') {
-        withSonarQubeEnv('http://144.91.90.109:29000') {
+        withSonarQubeEnv('SONARJ') {
             sh "./mvnw -ntp initialize sonar:sonar"
         }
     }
