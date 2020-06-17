@@ -37,11 +37,15 @@ node {
     
     stage('packaging') {
         sh "./mvnw -ntp verify -P-webpack -Pprod -DskipTests"
+        sh "**/target/*.jar /opt/jh-blog/app.jar"
         archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
     }
     stage('quality analysis') {
         withSonarQubeEnv('SONARJ') {
             sh "./mvnw -ntp initialize sonar:sonar"
         }
+    }
+    stage('reload') {
+        sh "systemctl restart blog"
     }
 }
